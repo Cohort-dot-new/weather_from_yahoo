@@ -1,0 +1,13 @@
+<h1>Weather info</h1>
+<p>Current temperature: <%= @temperature %> degrees</p>
+
+<p>Forecast data:</p>
+<% @forecasts[0..4].each do |forecast| %>
+  <div>
+    <%= forecast["date"] %>
+    <%= forecast["day"] %>
+    <%= forecast["high"] %>
+    <%= forecast["low"] %>
+    <%= forecast["text"] %>
+  </div>
+<% end %>
