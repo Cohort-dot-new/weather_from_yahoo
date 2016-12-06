@@ -1,4 +1,15 @@
 <h1>Weather info</h1>
+
+<%= form_tag "/forecasts", method: :get do %>
+  <%= label_tag :city %>
+  <%= text_field_tag :city %>
+  <%= label_tag :state %>
+  <%= text_field_tag :state %>
+  <%= submit_tag "Submit" %>
+<% end %>
+
+<h3><%= @city %> <%= @region %>, <%= @country %></h3>
+
 <p>Current temperature: <%= @temperature %> degrees</p>
 
 <p>Forecast data:</p>
